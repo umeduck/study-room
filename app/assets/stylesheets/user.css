@@ -3,17 +3,20 @@
   padding: 0px;
   text-decoration: none;
 }
-.user_box {
-  width: 600px;
+
+/* ログイン */
+
+.user_box{
+  width: 650px;
   height: 450px;
   margin: 100px auto 0;
   border-radius: 4px;
   border: 1px #ddd solid;
 }
-.user_box-inner {
+.user_box-inner{
   padding: 20px 30px;
 }
-.user_box-header {
+.user_box-header{
   line-height: 1.2;
   margin-bottom: 10px;
   padding-bottom: 20px;
@@ -33,9 +36,7 @@
   font-size: 18px;
   margin-right: 10px;
 }
-.field-input{
-}
-.field-input input{
+.field-input input, select{
   height: 40px;
   width: 300px;
   font-size: 18px;
@@ -58,4 +59,27 @@
   margin: 0 70px;
   text-align: center;
   line-height: 33px;
+}
+
+/* 新規登録 */
+
+.user_box-signup{
+  width: 700px;
+  height: 600px;
+  margin: 100px auto 0;
+  border-radius: 4px;
+  border: 1px #ddd solid;
+}
+.actions-sign-up{
+  text-align: center;
+}
+.actions-sign-up input{
+  width: 200px;
+  height: 50px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  background-color: #FFCC66;
+  border: none;
+  border-radius: 20px;
 }
