@@ -1,0 +1,35 @@
+<div class="user_box">
+  <div class="user_box-inner">
+    <div class="user_box-header">
+      <h1>ログイン</h1>
+    </div>
+    <div class="user_box-main">
+      <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :email%>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :password%>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password, autocomplete: "off"%>
+          </div>
+        </div>
+          <div class='actions'>
+            <%= f.submit "ログイン", class: 'btn'%>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="user_box-footer">
+      <a href="#">新規登録はこちら</a></br>
+      <a href="#">パスワードを忘れた場合はこちら</a>
+    </div>
+  </div>
+</div>
