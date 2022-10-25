@@ -58,3 +58,7 @@ gem 'devise'
 gem 'active_hash'
 
 gem 'pry-rails'
+
+group :development do
+  gem 'rubocop', require: false
+end
