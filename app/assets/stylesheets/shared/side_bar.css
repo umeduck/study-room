@@ -1,6 +1,6 @@
 .side_bar{
   width: 240px;
-  background: rgba(192,192,192);
+  background: rgba(192,192,192,0);
   float: right;
   padding: 20px 0;
 }
