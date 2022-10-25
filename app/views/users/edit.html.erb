@@ -1,0 +1,42 @@
+<div class='user_box'>
+  <div class='user_box-inner'>
+    <div class='user_box-header'>
+      <h1>アカウント編集</h1>
+    </div>
+    <div class='user_box-main'>
+      <%= form_with model: current_user, local: true do |f|%>
+        <div class='login-flash-message'>
+          <%= flash[:notice] %>
+          <%= flash[:alert] %>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <label>名前</label>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :name, autofocus: true%>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <label>学年</label>
+          </div>
+          <div class='field-input'>
+            <%= f.collection_select(:school_year_id, SchoolYear.all, :id, :year, {}, {class:"select-box", id:"item-sales-status"}) %>
+          </div>
+        </div>
+        <div class='field'>
+          <div class='field-label'>
+            <label>メールアドレス</label>
+          </div>
+          <div class='field-input'>
+            <%= f.email_field :email, autofocus: true%>
+          </div>
+        </div>
+        <div class='actions-sign-up'>
+          <%= f.submit "編集確定", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
