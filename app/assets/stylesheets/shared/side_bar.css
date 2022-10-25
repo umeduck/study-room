@@ -1,5 +1,4 @@
 .side_bar{
-  height: calc(100vh - 100px);
   width: 240px;
   background: rgba(192,192,192);
   float: right;
@@ -16,4 +15,7 @@
 .tag-list{
   padding-bottom: 10px;
   font-size: 18px;
+}
+.tag-list a{
+  color: #3333FF;
 }

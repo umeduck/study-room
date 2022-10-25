@@ -1,0 +1,38 @@
+<%= render 'shared/header' %>
+<div class="user-main">
+  <div class="user-show">
+    <div class="user-show-up">
+      <div class="user-show-title">
+        <h2 >ユーザー詳細</h2>
+      </div>
+      <div class="user-show-contents">
+        <div class="user-show-name">
+          <h2><%= @user.name %></h2>
+        </div>
+        <div class="user-show-school_year">
+          <h3><%= @school_year.year %></h3>
+        </div>
+      </div>
+    </div>
+    <div class="user-room">
+      <div class="user-show-title">
+        <h2>ルーム一覧</h2>
+      </div>
+      <div class="rooms">
+        <div class="room">
+          <div class="room-title"><a href="#">タイトル</a></div>
+          <div class="room-tag">タグ:数学</div>
+        </div>
+        <div class="room">
+          <div class="room-title"><a href="#">タイトル</a></div>
+          <div class="room-tag">タグ:数学</div>
+        </div>
+        <div class="room">
+          <div class="room-title"><a href="#">タイトル</a></div>
+          <div class="room-tag">タグ:数学</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render 'shared/side_bar' %>
+</div>

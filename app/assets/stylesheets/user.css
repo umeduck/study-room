@@ -87,3 +87,71 @@
   border: none;
   border-radius: 20px;
 }
+
+/* ユーザー詳細 */
+
+.user-main{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.user-show{
+  background-color: #DDDDDD;
+  width: calc(100vw - 240px);
+}
+.user-show-up{
+  margin: 30px 40px 10px;
+}
+.user-show-title{
+  height: 60px;
+  width: 290px;
+  background-color: #99FFFF;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+.user-show-title h2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+.user-show-contents{
+  height: 130px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px 0 50px;
+  border-radius: 0 10px 10px 10px;
+}
+.user-show-name{
+  font-size: 25px;
+}
+.user-show-school_year{
+  font-size: 20px;
+}
+.user-room{
+  margin: 60px 40px 10px;
+}
+.rooms{
+  height: 100%;
+  background-color: white;
+  padding: 0 80px 0 50px;
+  border-radius: 0 10px 10px 10px;
+  padding: 40px 30px;
+  overflow: scroll;
+}
+.room{
+  width: 1000px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+}
+.room-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+.room-tag{
+  font-size: 20px;
+}
