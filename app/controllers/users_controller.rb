@@ -3,8 +3,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @school_year = SchoolYear.find(@user.school_year_id)
   end
+
   def edit
   end
+
   def update
     if current_user.update(user_params)
       redirect root_path
@@ -14,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:name, :email, :school_year_id)
   end
