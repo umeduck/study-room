@@ -1,0 +1,47 @@
+.top-page-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 40px;
+  background: rgba(192,192,192,0.7);
+  height: 110px;
+}
+.header-title{
+  font-size: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+.header-title a{
+  color: black;
+  -webkit-text-stroke: 1px #FFF;
+}
+.nav{
+  padding-right: 50px;
+}
+.lists-right{
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+  font-size: 23px;
+}
+.user-name {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: black;
+  font-weight: bold;
+}
+.logout {
+  text-decoration: none;
+  color: black;
+}
+
+.login {
+  text-decoration: none;
+  line-height: 32px;
+  margin-right: 3vw;
+  color: black;
+}
+
+.sign-up {
+  text-decoration: none;
+  color: black;
+}

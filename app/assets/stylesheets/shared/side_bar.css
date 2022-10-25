@@ -1,0 +1,19 @@
+.side_bar{
+  height: calc(100vh - 100px);
+  width: 240px;
+  background: rgba(192,192,192);
+  float: right;
+  padding: 20px 0;
+}
+.side_bar h3{
+  text-align: center;
+}
+.tag-lists{
+  height: 100%;
+  padding: 30px;
+  overflow: scroll;
+}
+.tag-list{
+  padding-bottom: 10px;
+  font-size: 18px;
+}
