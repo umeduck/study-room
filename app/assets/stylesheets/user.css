@@ -141,7 +141,7 @@
   padding: 0 80px 0 50px;
   border-radius: 0 10px 10px 10px;
   padding: 40px 30px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 .room{
   width: 1000px;
