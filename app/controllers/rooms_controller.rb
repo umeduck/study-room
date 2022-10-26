@@ -13,8 +13,6 @@ class RoomsController < ApplicationController
       render :new
     end
   end
-  def show
-  end
   private
 
   def room_params
