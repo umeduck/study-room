@@ -4,12 +4,13 @@
     <div class='room-form'>
       <h1>新規ルーム作成</h1>
       <%=form_with model: @room, local: true do |f|%>
+        <%= render 'devise/shared/error_messages', model: f.object %>
         <div class='room-form-field'>
           <div class='room-form-field-left'>
-            <%= f.label :name, :ルーム名, class: 'room-form-label'%>
+            <%= f.label :title, :ルーム名, class: 'room-form-label'%>
           </div>
           <div class='room-form-field-right'>
-            <%= f.text_field :name, class: 'room-form-input', placeholder: 'ルーム名を入力してください'%>
+            <%= f.text_field :title, class: 'room-form-input', placeholder: 'ルーム名を入力してください'%>
           </div>
         </div>
         <div class='room-form-field'>
@@ -17,7 +18,7 @@
             <%= f.label :name, :タグ, class: 'room-form-label'%>
           </div>
           <div class='room-form-field-right'>
-            <%= f.text_field :tag, class: 'room-form-input', placeholder: 'タグを入力してください'%>
+            <%= f.text_field :name, class: 'room-form-input', placeholder: 'タグを入力してください'%>
           </div>
         </div>
         <div class='room-form-submit'>
