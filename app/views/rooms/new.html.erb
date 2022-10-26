@@ -1,0 +1,30 @@
+<%= render 'shared/header' %>
+<div class='room-new'>
+  <div class='room-new-main'>
+    <div class='room-form'>
+      <h1>新規ルーム作成</h1>
+      <%=form_with model: @room, local: true do |f|%>
+        <div class='room-form-field'>
+          <div class='room-form-field-left'>
+            <%= f.label :name, :ルーム名, class: 'room-form-label'%>
+          </div>
+          <div class='room-form-field-right'>
+            <%= f.text_field :name, class: 'room-form-input', placeholder: 'ルーム名を入力してください'%>
+          </div>
+        </div>
+        <div class='room-form-field'>
+          <div class='room-form-field-left'>
+            <%= f.label :name, :タグ, class: 'room-form-label'%>
+          </div>
+          <div class='room-form-field-right'>
+            <%= f.text_field :tag, class: 'room-form-input', placeholder: 'タグを入力してください'%>
+          </div>
+        </div>
+        <div class='room-form-submit'>
+          <%= f.submit 'ルームを作成する', class: 'room-form-submit-btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%=render 'shared/side_bar' %>
+</div>
