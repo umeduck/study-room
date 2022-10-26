@@ -1,0 +1,23 @@
+/* index */
+.top-main{
+  height: calc(100vh - 110px);
+  display: flex;
+  justify-content: space-between;
+}
+.top-rooms{
+  height: 550px;
+  background-color: white;
+  padding: 0 80px 0 50px;
+  border-radius: 0 10px 10px 10px;
+  padding: 40px 30px;
+  overflow-y: scroll;
+}
+.top-room{
+  width: 1000px;
+  border: 1px solid black;
+  margin-bottom: 30px;
+  padding: 10px 15px;
+}
+.room-name{
+  text-align: right;
+}

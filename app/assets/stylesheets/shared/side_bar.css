@@ -3,12 +3,12 @@
   background: rgb(192,192,192);
   float: right;
   padding: 20px 0;
+  height: calc(100vh - 110px);
 }
 .side_bar h3{
   text-align: center;
 }
 .tag-lists{
-  height: 100%;
   padding: 30px;
   overflow: scroll;
 }
