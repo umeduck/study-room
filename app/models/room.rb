@@ -5,6 +5,7 @@ class Room < ApplicationRecord
   has_many :users
   has_many :room_tags ,dependent: :destroy
   has_many :tags ,through: :room_tags
+  has_many :messages
 
   def save_tags(sent_tags)
     current_tags = self.tags.pluck(:name) unless self.tags.nil?

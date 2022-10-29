@@ -1,0 +1,38 @@
+<%=render 'shared/header' %>
+<div class="message-top">
+  <div class="message-main">
+    <div class="message-up">
+      <div class="room-message-title">
+        <%= @room.title %>
+      </div>
+      <div class="room-message-tag">
+        <% @tags.each do |tag| %>
+          #<%= tag.name %>
+        <% end %>
+      </div>
+    </div>
+    <div class="messages-index">
+      <div class="message">
+        <div class="message-text-up">
+          <div class="message-user-name">ユーザーネーム</div>
+          <div class="message-time">2000-1-16 AM8:00</div>
+        </div>
+        <div class="message-content">二次関数が分からないので誰か教えてください</div>
+      </div>
+      <div class="message">
+        <div class="message-text-up">
+          <div class="message-user-name">ユーザーネーム</div>
+          <div class="message-time">2000-1-16 AM8:00</div>
+        </div>
+        <div class="message-content">二次関数が分からないので誰か教えてください</div>
+      </div>
+    </div>
+    <div class="message-form">
+      <%= form_with model: [@room, @message], local: true do |f| %>
+        <%= f.text_field :content, class: 'form-content' %>
+        <%= f.submit :送信, class: 'form-submit' %>
+      <% end %>
+    </div>
+  </div>
+  <%= render 'shared/side_bar' %>
+</div>

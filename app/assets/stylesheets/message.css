@@ -1,0 +1,52 @@
+.message-top{
+  display: flex;
+  justify-content: space-between;
+}
+.message-main{
+  width: calc(100vw - 240px);
+  padding: 20px;
+  height: 100px;
+}
+.message-up{
+  margin-bottom: 20px;
+}
+.room-message-title{
+  padding-bottom: 5px;
+  border-bottom: 1px solid #DDDDDD;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.messages-index{
+  height: 530px;
+  width: 100%;
+  overflow-y: scroll;
+}
+.message{
+  margin-bottom: 20px;
+}
+.message-text-up{
+  display: flex;
+  margin-bottom: 5x;
+}
+.message-user-name{
+  padding-right: 30px;
+}
+.message-content{
+  font-size: 19px;
+}
+.message-form{
+  width: 100%;
+
+}
+.form-content{
+  height: 50px;
+  width: 1000px;
+  margin-right: 20px;
+  font-size: 20px;
+  padding: 10px;
+}
+.form-submit{
+  height: 50px;
+  width: 100px;
+}
