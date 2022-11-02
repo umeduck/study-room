@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   with_options presence: true do
    validates :name
-   validates :school_year_id
+   validates :school_year_id, numericality: { other_than: 1, message: "can't be blank" }
   end
   has_many :rooms
   has_many :messages
