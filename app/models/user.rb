@@ -8,6 +8,6 @@ class User < ApplicationRecord
    validates :name
    validates :school_year_id
   end
-  belongs_to :room
+  has_many :rooms
   has_many :messages
 end

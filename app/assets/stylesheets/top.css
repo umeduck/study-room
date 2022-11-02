@@ -21,3 +21,9 @@
 .room-name{
   text-align: right;
 }
+.room-tags{
+  display: flex;
+}
+.room-tag{
+  margin-right: 10px;
+}

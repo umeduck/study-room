@@ -19,18 +19,19 @@
         <h2>ルーム一覧</h2>
       </div>
       <div class="rooms">
-        <div class="room">
-          <div class="room-title"><a href="#">タイトル</a></div>
-          <div class="room-tag">タグ:数学</div>
-        </div>
-        <div class="room">
-          <div class="room-title"><a href="#">タイトル</a></div>
-          <div class="room-tag">タグ:数学</div>
-        </div>
-        <div class="room">
-          <div class="room-title"><a href="#">タイトル</a></div>
-          <div class="room-tag">タグ:数学</div>
-        </div>
+        <% @user.rooms.each do |room| %>
+          <div class="room">
+            <div class="room-up">
+              <div class="room-title"><%=link_to room.title, room_messages_path(room.id) %></div>
+              <div class="room-delete"><%= link_to 'ルームの削除', room_path(room.id), method: :delete %></div>
+            </div>
+            <div class="room-tags">
+              <% room.tags.each do |tag| %>
+               <div class="room-tag">#<%= tag.name %></div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

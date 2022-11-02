@@ -27,7 +27,7 @@
 }
 .message-text-up{
   display: flex;
-  margin-bottom: 5x;
+  margin-bottom: 10px;
 }
 .message-user-name{
   padding-right: 30px;
@@ -49,4 +49,5 @@
 .form-submit{
   height: 50px;
   width: 100px;
+  font-size: 17px;
 }

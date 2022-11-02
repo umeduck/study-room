@@ -13,6 +13,12 @@ class RoomsController < ApplicationController
       render :new
     end
   end
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to user_path(current_user.id)
+  end
+
   private
 
   def room_params
