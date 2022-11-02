@@ -62,3 +62,7 @@ gem 'pry-rails'
 group :development do
   gem 'rubocop', require: false
 end
+
+gem 'rspec-rails', '~> 4.0.0'
+
+gem 'factory_bot_rails'
