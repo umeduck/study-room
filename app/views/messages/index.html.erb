@@ -1,0 +1,35 @@
+<%=render 'shared/header' %>
+<div class="message-top">
+  <div class="message-main">
+    <div class="message-up">
+      <div class="room-message-title">
+        <%= @room.title %>
+      </div>
+      <div class="room-message-tag">
+        <% @tags.each do |tag| %>
+          #<%= tag.name %>
+        <% end %>
+      </div>
+    </div>
+    <div class="messages-index">
+
+      <% @messages.each do |message| %>
+        <div class="message">
+          <div class="message-text-up">
+            <div class="message-user-name"><%= message.user.name %></div>
+            <div class="message-time"><%= message.created_at %></div>
+          </div>
+          <div class="message-content"><%= message.content %></div>
+        </div>
+      <% end %>
+
+    </div>
+    <div class="message-form">
+      <%= form_with model: [@room, @message], local: true do |f| %>
+        <%= f.text_field :content, class: 'form-content' %>
+        <%= f.submit :送信, class: 'form-submit' %>
+      <% end %>
+    </div>
+  </div>
+  <%= render 'shared/side_bar' %>
+</div>

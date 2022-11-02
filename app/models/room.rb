@@ -2,9 +2,10 @@ class Room < ApplicationRecord
 
   validates :title, presence: true
   
-  has_many :users
+  belongs_to :user
   has_many :room_tags ,dependent: :destroy
   has_many :tags ,through: :room_tags
+  has_many :messages,dependent: :destroy
 
   def save_tags(sent_tags)
     current_tags = self.tags.pluck(:name) unless self.tags.nil?

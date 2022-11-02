@@ -29,6 +29,16 @@
   color: black;
   font-weight: bold;
 }
+.user-edit{
+  text-decoration: none;
+  color: black;
+  margin-right: 3vw;
+}
+.user-new{
+  text-decoration: none;
+  color: black;
+  margin-right: 3vw;
+}
 .logout {
   text-decoration: none;
   color: black;
