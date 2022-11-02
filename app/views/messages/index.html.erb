@@ -24,12 +24,14 @@
       <% end %>
 
     </div>
-    <div class="message-form">
-      <%= form_with model: [@room, @message], local: true do |f| %>
-        <%= f.text_field :content, class: 'form-content' %>
-        <%= f.submit :送信, class: 'form-submit' %>
-      <% end %>
-    </div>
+    <% if user_signed_in? %>
+      <div class="message-form">
+        <%= form_with model: [@room, @message], local: true do |f| %>
+          <%= f.text_field :content, class: 'form-content' %>
+          <%= f.submit :送信, class: 'form-submit' %>
+        <% end %>
+      </div>
+    <% end %>
   </div>
   <%= render 'shared/side_bar' %>
 </div>

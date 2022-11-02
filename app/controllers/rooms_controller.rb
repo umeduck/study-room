@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :only_user, only: :destroy
   def new
     @room = Room.new
   end
@@ -14,8 +15,8 @@ class RoomsController < ApplicationController
     end
   end
   def destroy
-    room = Room.find(params[:id])
-    room.destroy
+    @room = Room.find(params[:id])
+    @room.destroy
     redirect_to user_path(current_user.id)
   end
 
@@ -23,6 +24,10 @@ class RoomsController < ApplicationController
 
   def room_params
     params.require(:room).permit(:title).merge(user_id: current_user.id)
+  end
+
+  def only_user
+    redirect_to root_path unless current_user.id == @room.user_id
   end
   
   
