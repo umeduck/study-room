@@ -14,12 +14,12 @@ RSpec.describe Room, type: :model do
       it 'titleが空の場合' do
         @room.title = ''
         @room.valid?
-        expect(@room).to include("Title can't be blank")
+        expect(@room.errors.full_messages).to include("Title can't be blank")
       end
       it 'userモデルが紐づいていない場合' do
         @room.user = nil
         @room.valid?
-        expect(@room).to include("User must exist")
+        expect(@room.errors.full_messages).to include("User must exist")
       end
     end
   end
