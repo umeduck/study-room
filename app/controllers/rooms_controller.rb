@@ -1,4 +1,5 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!
   before_action :only_user, only: :destroy
   def new
     @room = Room.new

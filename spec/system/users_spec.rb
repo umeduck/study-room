@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "Users", type: :system do
+  before do
+    @user = FactoryBot.build(:user)
+    @user_login = FactoryBot.create(:user)
+  end
   describe '新規登録' do
-    before do
-      @user = FactoryBot.build(:user)
-    end
     context 'ユーザー新規登録ができるとき' do 
       it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
         # トップページに移動
@@ -55,9 +56,6 @@ RSpec.describe "Users", type: :system do
     end
   end
   describe 'ログイン機能' do
-    before do
-      @user_login = FactoryBot.create(:user)
-    end
     context 'ユーザーログインができるとき' do
       it '正しい情報を入力すればログインできる' do
         # トップページへ移動
@@ -103,7 +101,6 @@ RSpec.describe "Users", type: :system do
     context 'ユーザー情報を変更をできた場合' do
       it '必要事項を入力した場合保存できる' do
         # ログインを行う
-        @user_login = FactoryBot.create(:user)
         sign_in(@user_login)
         # トップページにユーザー編集ページ遷移ボタンが存在するか確認
         expect(page).to have_content('ユーザー編集')
