@@ -11,18 +11,18 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <label>メールアドレス</label>
+            <label for='user-email'>メールアドレス</label>
           </div>
           <div class='field-input'>
-            <%= f.email_field :email, autofocus: true%>
+            <%= f.email_field :email, autofocus: true, id: 'user-email' %>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <label>パスワード</label>
+            <label for='user-password'>パスワード</label>
           </div>
           <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
+            <%= f.password_field :password, autocomplete: "off", id: 'user-password' %>
           </div>
         </div>
           <div class='actions'>
