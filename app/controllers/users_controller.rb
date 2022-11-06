@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_action user_only, only: :edit
+  before_action :user_find, only: [:edit, :update, :show]
+  before_action :user_only, only: [:update, :edit]
+
   def show
-    @user = User.find(params[:id])
     @school_year = SchoolYear.find(@user.school_year_id)
   end
 
@@ -18,11 +19,15 @@ class UsersController < ApplicationController
 
   private
 
+  def user_find
+    @user = User.find(params[:id])
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :school_year_id)
   end
 
   def user_only
-    redirect_to root_path unless current_user.id == @room.user_id
+    redirect_to root_path unless current_user.id == @user.id
   end
 end

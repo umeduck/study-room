@@ -8,15 +8,15 @@
         <%= render 'devise/shared/error_messages', model: f.object %>
         <div class='field'>
           <div class='field-label'>
-            <label>ニックネーム</label>
+            <label for='user_nickname'>名前</label>
           </div>
           <div class='field-input'>
-            <%= f.text_field :name, autofocus: true%>
+            <%= f.text_field :name, autofocus: true, id: 'user_nickname' %>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <label>学年</label>
+            <label for='user_school_year_id'>学年</label>
           </div>
           <div class='field-input'>
             <%= f.collection_select(:school_year_id, SchoolYear.all, :id, :year, {}, {class:"select-box", id:"item-sales-status"}) %>
@@ -24,30 +24,30 @@
         </div>
         <div class='field'>
           <div class='field-label'>
-            <label>メールアドレス</label>
+            <label for='user_email'>メールアドレス</label>
           </div>
           <div class='field-input'>
-            <%= f.email_field :email%>
+            <%= f.email_field :email, id: 'user_email' %>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <label>パスワード</label>
+            <label for='user_password'>パスワード</label>
           </div>
           <div class='field-input'>
-            <%= f.password_field :password, autocomplete: "off"%>
+            <%= f.password_field :password, autocomplete: "off", id: 'user_password' %>
           </div>
         </div>
         <div class='field'>
           <div class='field-label'>
-            <label>パスワード（確認）</label>
+            <label for='user_password_confirmation'>パスワード（確認）</label>
           </div>
           <div class='field-input'>
-            <%= f.password_field :password_confirmation, autocomplete: "off"%>
+            <%= f.password_field :password_confirmation, autocomplete: "off", id: 'user_password_confirmation' %>
           </div>
         </div>
         <div class='actions-sign-up'>
-          <%= f.submit "アカウント作成", class: 'btn'%>
+          <%= f.submit "アカウント作成", class: 'btn', id: 'user_signup_btn' %>
         </div>
       <% end %>
     </div>

@@ -7,18 +7,18 @@
         <%= render 'devise/shared/error_messages', model: f.object %>
         <div class='room-form-field'>
           <div class='room-form-field-left'>
-            <%= f.label :title, :ルーム名, class: 'room-form-label'%>
+            <%= f.label :title, :ルーム名, class: 'room-form-label', for: 'room-name' %>
           </div>
           <div class='room-form-field-right'>
-            <%= f.text_field :title, class: 'room-form-input', placeholder: 'ルーム名を入力してください'%>
+            <%= f.text_field :title, class: 'room-form-input', placeholder: 'ルーム名を入力してください', id: 'room-name' %>
           </div>
         </div>
         <div class='room-form-field'>
           <div class='room-form-field-left'>
-            <%= f.label :name, :タグ, class: 'room-form-label'%>
+            <%= f.label :name, :タグ, class: 'room-form-label', for: 'room-tag' %>
           </div>
           <div class='room-form-field-right'>
-            <%= f.text_field :name, class: 'room-form-input', placeholder: 'タグを入力してください'%>
+            <%= f.text_field :name, class: 'room-form-input', placeholder: 'タグを入力してください', id: 'room-tag' %>
           </div>
         </div>
         <div class='room-form-submit'>
