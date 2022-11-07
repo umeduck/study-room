@@ -22,6 +22,12 @@ ActiveRecord::Schema.define(version: 2022_10_26_082838) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "content"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "room_tags", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "room_id"
     t.bigint "tag_id"
