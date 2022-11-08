@@ -14,11 +14,11 @@ https://study-room.onrender.com
 # 利用方法
 
 ## 質問投稿
-1.ヘッダーあるルーム作成にて質問ルームを作成する
+1.ヘッダーあるルーム作成にて質問ルームを作成する  
 2.作成した質問ルームに遷移してフォームから質問を行う
 
 ## 返答投稿
-1.返答したい質問ルームに遷移する
+1.返答したい質問ルームに遷移する  
 2.フォームから返答する
 
 ## アプリケーションを作成した背景
@@ -49,9 +49,7 @@ https://study-room.onrender.com
 ## メッセージ投稿機能
 [![Image from Gyazo](https://i.gyazo.com/4804ddb4cb6e642f8196736f4cc891c1.gif)](https://gyazo.com/4804ddb4cb6e642f8196736f4cc891c1)
 
-# 実装予定の機能
-現在タイトル、学年、タグ検索を実装中。
-今後はビューをもう少し見やすくするためのビュー変更を実装予定。
+
 
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/9e323d920ad4ec9aa9f9ffd5e64cd5f9.png)](https://gyazo.com/9e323d920ad4ec9aa9f9ffd5e64cd5f9)
@@ -59,9 +57,32 @@ https://study-room.onrender.com
 # 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/b46a88988ee803ac8de314c4873dce50.png)](https://gyazo.com/b46a88988ee803ac8de314c4873dce50)
 
-# 
+# Userモデル単体テストコード
+[![Image from Gyazo](https://i.gyazo.com/dc5f0d8153af1665007b845e4cc7876c.png)](https://gyazo.com/dc5f0d8153af1665007b845e4cc7876c)
 
-# テーブル設計 #
+# Roomモデル単体テストコード
+[![Image from Gyazo](https://i.gyazo.com/bbe741899e15f82c775a062815299519.png)](https://gyazo.com/bbe741899e15f82c775a062815299519)
+
+# Messageモデル単体テストコード
+[![Image from Gyazo](https://i.gyazo.com/327051a4e95665aff5aa1dd14a075913.png)](https://gyazo.com/327051a4e95665aff5aa1dd14a075913)
+
+# tagモデル単体テストコード
+[![Image from Gyazo](https://i.gyazo.com/4c603782413c2f199f4c2cdbe9b5e4f0.png)](https://gyazo.com/4c603782413c2f199f4c2cdbe9b5e4f0)
+
+# ユーザーの結合コード
+[![Image from Gyazo](https://i.gyazo.com/60a86caf1ce73ef49e80cd375c9ffaf6.png)](https://gyazo.com/60a86caf1ce73ef49e80cd375c9ffaf6)
+
+# ルームの結合コード
+[![Image from Gyazo](https://i.gyazo.com/284a6c7f57812521d9aaac3b780ca0ef.png)](https://gyazo.com/284a6c7f57812521d9aaac3b780ca0ef)
+
+# メッセージの結合コード
+[![Image from Gyazo](https://i.gyazo.com/41bc48fb047166c5f0b41455bfde1ac5.png)](https://gyazo.com/41bc48fb047166c5f0b41455bfde1ac5)
+
+# 実装予定の機能
+現在タイトル、学年、タグ検索を実装中。
+今後はビューをもう少し見やすくするためのビュー変更を実装予定。
+
+# テーブル設計
 
 ## usersテーブル
 
@@ -121,7 +142,7 @@ https://study-room.onrender.com
 
 
 # 開発環境
-Ruby, Ruby on Rails, HTML, CSS, Mysql
+Ruby, Ruby on Rails, HTML, CSS, MySQL
 
 # ローカルでの動作方法
 以下のコマンドを入力
