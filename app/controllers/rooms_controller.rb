@@ -16,7 +16,6 @@ class RoomsController < ApplicationController
     end
   end
   def destroy
-    @room = Room.find(params[:id])
     @room.destroy
     redirect_to user_path(current_user.id)
   end
@@ -28,6 +27,7 @@ class RoomsController < ApplicationController
   end
 
   def only_user
+    @room = Room.find(params[:id])
     redirect_to root_path unless current_user.id == @room.user_id
   end
   
