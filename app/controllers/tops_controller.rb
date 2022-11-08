@@ -1,5 +1,5 @@
 class TopsController < ApplicationController
   def index
-    @rooms = Room.all
+    @rooms = Room.includes(:user)
   end
 end

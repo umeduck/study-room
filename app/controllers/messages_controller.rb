@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
     @message = Message.new
     @room = Room.find(params[:room_id])
     @tags = @room.tags
-    @messages = @room.messages
+    @messages = @room.messages.includes(:user)
   end
   
   def message_params
