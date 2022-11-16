@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
     @school_year = SchoolYear.find(@user.school_year_id)
+    @tags = Tag.all
   end
 
   def edit

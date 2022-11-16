@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :instance_variable, only: [:index, :create]
   def index
+    @tags = Tag.all
   end
 
   def create
@@ -18,7 +19,7 @@ class MessagesController < ApplicationController
   def instance_variable
     @message = Message.new
     @room = Room.find(params[:room_id])
-    @tags = @room.tags
+    @room_tags = @room.tags
     @messages = @room.messages.includes(:user)
   end
   

@@ -3,6 +3,7 @@ class RoomsController < ApplicationController
   before_action :only_user, only: :destroy
   def new
     @room = Room.new
+    @tags = Tag.all
   end
   def create
     @room = Room.new(room_params)
